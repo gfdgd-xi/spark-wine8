@@ -1,0 +1,11 @@
+wine (8.8~focal-1) UNRELEASED; urgency=low
+
+  * version number update by debtransform
+
+ -- debtransform <build@opensuse.org>  Sat, 13 May 2023 00:01:11 +0000
+
+wine (8.8) UNRELEASED; urgency=low
+
+  * Update to 8.8 release.
+ 
+ -- Rosanne DiMesio <dimesio@earthlink.net>  Fri, 12 May 2023 18:51:47 -0500
