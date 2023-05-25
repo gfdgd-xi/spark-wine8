@@ -54,34 +54,34 @@ override_dh_install:
 	rm -f debian/spark-wine8/opt/spark-wine8/bin/wine64-preloader
 
 	# Compat symlinks for bindir
-	mkdir -p debian/winehq-devel/usr/bin
+	mkdir -p debian/spark-wine8-devel/usr/bin
 	for _file in $$(ls "debian/spark-wine8/opt/spark-wine8/bin"); do \
-		ln -s "/opt/spark-wine8/bin/$$_file" "debian/winehq-devel/usr/bin/$$_file"; \
+		ln -s "/opt/spark-wine8/bin/$$_file" "debian/spark-wine8-devel/usr/bin/$$_file"; \
 	done
 	for _file in wine wine-preloader; do \
-		ln -s "/opt/spark-wine8/bin/$$_file" "debian/winehq-devel/usr/bin/$$_file"; \
+		ln -s "/opt/spark-wine8/bin/$$_file" "debian/spark-wine8-devel/usr/bin/$$_file"; \
 	done
 ifeq ($(DEB_HOST_ARCH),amd64)
 	for _file in wine64 wine64-preloader; do \
-		ln -s "/opt/spark-wine8/bin/$$_file" "debian/winehq-devel/usr/bin/$$_file"; \
+		ln -s "/opt/spark-wine8/bin/$$_file" "debian/spark-wine8-devel/usr/bin/$$_file"; \
 	done
 endif
 
 	# Compat symlinks for desktop file
-	mkdir -p "debian/winehq-devel/usr/share/applications"
+	mkdir -p "debian/spark-wine8-devel/usr/share/applications"
 	for _file in $$(ls "debian/spark-wine8/opt/spark-wine8/share/applications"); do \
-		ln -s "/opt/spark-wine8/share/applications/$$_file" "debian/winehq-devel/usr/share/applications/$$_file"; \
+		ln -s "/opt/spark-wine8/share/applications/$$_file" "debian/spark-wine8-devel/usr/share/applications/$$_file"; \
 	done
 
 	# Compat manpages
 	for _dir in man1 de.UTF-8/man1 fr.UTF-8/man1 pl.UTF-8/man1; do \
-		mkdir -p "debian/winehq-devel/usr/share/man/$$_dir"; \
+		mkdir -p "debian/spark-wine8-devel/usr/share/man/$$_dir"; \
 		if [ -d "debian/spark-wine8/opt/spark-wine8/share/man/$$_dir" ]; then \
 			for _file in $$(ls "debian/spark-wine8/opt/spark-wine8/share/man/$$_dir"); do \
-				ln -s "/opt/spark-wine8/share/man/$$_dir/$$_file" "debian/winehq-devel/usr/share/man/$$_dir/$$_file"; \
+				ln -s "/opt/spark-wine8/share/man/$$_dir/$$_file" "debian/spark-wine8-devel/usr/share/man/$$_dir/$$_file"; \
 			done; \
 		fi; \
-		ln -s "/opt/spark-wine8/share/man/$$_dir/wine.1" "debian/winehq-devel/usr/share/man/$$_dir/wine.1"; \
+		ln -s "/opt/spark-wine8/share/man/$$_dir/wine.1" "debian/spark-wine8-devel/usr/share/man/$$_dir/wine.1"; \
 	done
 
 	# Generate list of recommendations
