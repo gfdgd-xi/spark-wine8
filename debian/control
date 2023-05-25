@@ -57,7 +57,7 @@ Build-Depends: autotools-dev,
                x11proto-xinerama-dev
 Standards-Version: 3.9.5
 
-Package: wine-devel-i386
+Package: spark-wine8-i386
 Architecture: i386
 Multi-Arch: foreign
 Pre-Depends: dpkg (>= 1.14.12ubuntu3), ${misc:Pre-Depends}
@@ -95,7 +95,7 @@ Description: WINE Is Not An Emulator - runs MS Windows programs
  This package contains the files needed to support 32-bit Windows
  programs.
 
-Package: wine-devel-amd64
+Package: spark-wine8-amd64
 Architecture: amd64
 Multi-Arch: foreign
 Pre-Depends: dpkg (>= 1.14.12ubuntu3), ${misc:Pre-Depends}
@@ -134,13 +134,13 @@ Description: WINE Is Not An Emulator - runs MS Windows programs
  This package contains the files needed to support 64-bit Windows
  programs.
 
-Package: wine-devel
+Package: spark-wine8
 Architecture: i386 amd64 
 Multi-Arch: foreign
 Pre-Depends: dpkg (>= 1.14.12ubuntu3), ${misc:Pre-Depends}
 Depends:    ${misc:Depends}, ${shlibs:Depends},
-            wine-devel-i386  (= ${binary:Version}) [i386 amd64],
-            wine-devel-amd64 (= ${binary:Version}) [amd64],
+            spark-wine8-i386  (= ${binary:Version}) [i386 amd64],
+            spark-wine8-amd64 (= ${binary:Version}) [amd64],
 Recommends: libcap2-bin,
 Section: otherosfs
 Priority: optional
@@ -152,13 +152,13 @@ Description: WINE Is Not An Emulator - runs MS Windows programs
  API calls using their Unix or X11 equivalents.  The library may also
  be used for porting Win32 code into native Unix executables.
 
-Package: wine-devel-dev
+Package: spark-wine8-dev
 Architecture: i386 amd64 armhf
 Pre-Depends: dpkg (>= 1.14.12ubuntu3), ${misc:Pre-Depends}
 Depends:    libc6-dev,
             ${shlibs:Depends},
-            wine-devel-i386  (= ${binary:Version}) [i386 amd64],
-            wine-devel-amd64 (= ${binary:Version}) [amd64],
+            spark-wine8-i386  (= ${binary:Version}) [i386 amd64],
+            spark-wine8-amd64 (= ${binary:Version}) [amd64],
 Section: libdevel
 Priority: optional
 Description: WINE Is Not An Emulator - runs MS Windows programs
@@ -168,13 +168,13 @@ Description: WINE Is Not An Emulator - runs MS Windows programs
  This package contains the libraries and header files needed to
  develop programs which make use of Wine.
 
-Package: wine-devel-dbg
+Package: spark-wine8-dbg
 Architecture: i386 amd64
 Multi-Arch: same
 Pre-Depends: dpkg (>= 1.14.12ubuntu3), ${misc:Pre-Depends}
 Depends:    ${shlibs:Depends},
-            wine-devel-i386  (= ${binary:Version}) [i386 amd64],
-            wine-devel-amd64 (= ${binary:Version}) [amd64],
+            spark-wine8-i386  (= ${binary:Version}) [i386 amd64],
+            spark-wine8-amd64 (= ${binary:Version}) [amd64],
 Section: debug
 Priority: optional
 Description: WINE Is Not An Emulator - runs MS Windows programs
@@ -184,9 +184,9 @@ Description: WINE Is Not An Emulator - runs MS Windows programs
  This package includes debugging symbols useful for reporting crashes
  and other failures.
 
-Package: winehq-devel
+Package: spark-wine8-devel
 Architecture: i386 amd64
-Depends: wine-devel (= ${binary:Version}), ${misc:Depends}
+Depends: spark-wine8 (= ${binary:Version}), ${misc:Depends}
 Section: otherosfs
 Priority: optional
 Replaces:   wine, wine1.4, wine1.5, wine1.6, wine1.7, wine-i386, wine1.4-i386,
@@ -201,5 +201,5 @@ Description: WINE Is Not An Emulator - runs MS Windows programs
  Wine is a program which allows running Microsoft Windows programs
  (including DOS, Windows 3.x and Win32 executables) on Unix.
  .
- This compatibility package allows to use wine-devel system-wide as
+ This compatibility package allows to use spark-wine8 system-wide as
  the default Wine version.

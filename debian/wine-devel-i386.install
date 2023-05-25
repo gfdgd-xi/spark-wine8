@@ -1,8 +1,8 @@
-/opt/wine-devel/lib/wine/i386-unix
-/opt/wine-devel/lib/wine/i386-windows
-/opt/wine-devel/bin/wine
-/opt/wine-devel/bin/wine-preloader
-/opt/wine-devel/share/man/man?/wine.?*
-/opt/wine-devel/share/man/de.UTF-8/man?/wine.?*
-/opt/wine-devel/share/man/fr.UTF-8/man?/wine.?*
-/opt/wine-devel/share/man/pl.UTF-8/man?/wine.?*
+/opt/spark-wine8/lib/wine/i386-unix
+/opt/spark-wine8/lib/wine/i386-windows
+/opt/spark-wine8/bin/wine
+/opt/spark-wine8/bin/wine-preloader
+/opt/spark-wine8/share/man/man?/wine.?*
+/opt/spark-wine8/share/man/de.UTF-8/man?/wine.?*
+/opt/spark-wine8/share/man/fr.UTF-8/man?/wine.?*
+/opt/spark-wine8/share/man/pl.UTF-8/man?/wine.?*

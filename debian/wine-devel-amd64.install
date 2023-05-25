@@ -1,4 +1,4 @@
-/opt/wine-devel/lib64/wine/x86_64-unix
-/opt/wine-devel/lib64/wine/x86_64-windows
-/opt/wine-devel/bin/wine64
-/opt/wine-devel/bin/wine64-preloader
+/opt/spark-wine8/lib64/wine/x86_64-unix
+/opt/spark-wine8/lib64/wine/x86_64-windows
+/opt/spark-wine8/bin/wine64
+/opt/spark-wine8/bin/wine64-preloader
